@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-wget https://github.com/H2Kimi7/bigrelayinstall/blob/main/monitor.sh
+wget https://raw.githubusercontent.com/H2Kimi7/bigrelayinstall/refs/heads/main/monitor.sh
 set -euo pipefail
 
 TARGET_IP="138.252.163.253"
