@@ -110,11 +110,7 @@ if [[ "${EUID}" -ne 0 ]]; then
   exec sudo /usr/local/bin/jc "$@"
 fi
 
-/usr/local/bin/jc-net-forward.sh
-systemctl daemon-reload
-systemctl enable --now jc-monitor.service >/dev/null
-systemctl restart jc-monitor.service
-systemctl --no-pager --full status jc-monitor.service
+exec /usr/local/bin/monitor.sh "$@"
 EOF
 
 chmod +x "${JC_CMD}"
